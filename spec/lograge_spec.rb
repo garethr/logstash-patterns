@@ -31,6 +31,20 @@ describe "the lograge grok pattern" do
       @match.should have_logstash_field("controller").with_value("jobs")
       @match.should have_logstash_field("action").with_value("show")
     end
+
+    it "should have the correct value for db time" do
+      @match.should have_logstash_field("db").with_value("15.26")
+    end
+  end
+
+  describe "without the db time" do
+    before do
+      log_line = "GET /jobs/833552.json format=json action=jobs#show status=200 duration=58.33 view=40.43"
+      @match = @grok.match(log_line)
+    end
+    it "should have the correct value for the request view time" do
+      @match.should have_logstash_field("view").with_value("40.43")
+    end
   end
 
   describe "with a post request" do

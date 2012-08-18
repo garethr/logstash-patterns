@@ -1,0 +1,1 @@
+LOGRAGE %{WORD:method}%{SPACE}%{DATA}%{SPACE}action=%{WORD:controller}#%{WORD:action}%{SPACE}status=%{INT:status}%{SPACE}duration=%{NUMBER:duration}%{SPACE}view=%{NUMBER:view}%{GREEDYDATA}

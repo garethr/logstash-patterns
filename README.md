@@ -6,6 +6,7 @@ repo is me starting to collect useful patterns. Currently this
 repository contains patterns for:
 
 * [Lograge](https://github.com/roidrage/lograge) - making Rails logs suck less
+* [lighttpd](http://redmine.lighttpd.net/projects/1/wiki/Docs_ModAccesslog) - default lighttpd accesslog format
 
 ## Tests
 

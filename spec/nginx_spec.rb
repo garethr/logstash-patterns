@@ -22,8 +22,12 @@ describe "the extended nginx grok pattern" do
       @match = @grok.match(log_line)
     end
 
-    it "should have the correct http method value" do
+    it "should have the correct client ip" do
       @match.should have_logstash_field("clientip").with_value("10.234.66.250")
+    end
+
+    it "should have the correct http method value" do
+      @match.should have_logstash_field("verb").with_value("GET")
     end
 
     it "should have the correct agent" do

@@ -6,6 +6,7 @@ repo is me starting to collect useful patterns. Currently this
 repository contains patterns for:
 
 * [Lograge](https://github.com/roidrage/lograge) - making Rails logs suck less
+* Extended Nginx example
 
 ## Tests
 
